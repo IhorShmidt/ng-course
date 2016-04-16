@@ -1,6 +1,10 @@
 <div class="list">
+    <p>
+        <input type="text" ng-model="search" placeholder="search">
+    </p>
     <ul>
-        <li ng-repeat="item in items">
+      <p>Found {{array.length}} matches of {{items.length}}</p>
+        <li ng-repeat="item in array=(items | filter : search)">
             <list-item title="item.title" description="item.description"></list-item>
         </li>
     </ul>

@@ -2,7 +2,8 @@
 
 angular.module('myApp')
     .factory('TodoService', function() {
-        var items = [{
+        var items = [
+           {
             id: 1,
             title: 'Item #1',
             description: 'Item #1 description'

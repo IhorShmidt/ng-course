@@ -6,5 +6,4 @@ angular.module('myApp')
 function AppController($scope, TodoService) {
    $scope.items = TodoService.items;
    $scope.addItem = TodoService.addItem;
-
 }
