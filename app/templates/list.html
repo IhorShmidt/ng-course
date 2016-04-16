@@ -5,7 +5,7 @@
     <ul>
       <p>Found {{array.length}} matches of {{items.length}}</p>
         <li ng-repeat="item in array=(items | filter : search)">
-            <list-item title="item.title" description="item.description"></list-item>
+            <list-item title="item.title" description="item.description" id="item.id"></list-item>
         </li>
     </ul>
 </div>

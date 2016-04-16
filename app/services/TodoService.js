@@ -2,6 +2,7 @@
 
 angular.module('myApp')
     .factory('TodoService', function() {
+      var glovalId = 3;
         var items = [
            {
             id: 1,
@@ -20,6 +21,7 @@ angular.module('myApp')
                 return;
             }
             var copy = angular.copy(item);
+            copy.id = glovalId++;
             items.unshift(copy);
             clear(item);
         }
