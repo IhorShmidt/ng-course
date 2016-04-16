@@ -3,15 +3,16 @@
 angular.module('myApp')
   .directive('listItem', listItemDirective);
 
-function listItemDirective() {
+function listItemDirective(TodoService) {
   return {
     scope: {
       title: '=',
-      description: '='
+      description: '=',
+      id: '=',
     },
     templateUrl: 'templates/list-item.html',
-    link: function($scope) {
-      console.log("SCOPE>?", $scope);
+    link:function ($scope) {
+      $scope.delItem = TodoService.delItem;
     }
   }
 }
